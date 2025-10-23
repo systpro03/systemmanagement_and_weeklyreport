@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.16.161.100',
-	'username' => 'itsystem',
-	'password' => 'sysdev2025',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'root',
 	'database' => 'itsystem',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -99,9 +99,9 @@ $db['default'] = array(
 
 $db['pis'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.16.161.34',
-	'username' => 'pis',
-	'password' => 'itprog2013',	
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'root',
 	'database' => 'pis',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -122,7 +122,7 @@ $db['pis'] = array(
 
 $db['isr'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.16.161.43',
+	'hostname' => 'localhost',
 	'username' => 'rfstor',
 	'password' => 'rfstor2023',	
 	'database' => 'rfstor',
