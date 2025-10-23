@@ -62,10 +62,16 @@ The system is designed to be **lightweight, fast, and extensible**, making it id
 
 ---
 
-### ⚙️ Tech Stack
+### 🧰 Tech Toolbox
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=php,codeigniter,js,jquery,bootstrap,mysql,html,css,git,vscode,linux" />
+  <!-- Common tech via skillicons.dev -->
+  <img src="https://skillicons.dev/icons?i=php,laravel,js,jquery,html,css,bootstrap,mysql,git,vscode,linux" />
+  <br>
+  <!-- Custom or missing icons -->
+  <img src="https://img.shields.io/badge/CodeIgniter-FC390E?style=for-the-badge&logo=codeigniter&logoColor=white" />
+  <img src="https://img.shields.io/badge/AJAX-00599C?style=for-the-badge&logo=jquery&logoColor=white" />
+  <img src="https://img.shields.io/badge/APIs-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
 </p>
 
 ---
