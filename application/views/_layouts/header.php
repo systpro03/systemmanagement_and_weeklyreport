@@ -298,15 +298,31 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                                 </span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <h6 class="dropdown-header">Welcome
-                                    <?php echo ucwords(strtolower($this->session->userdata('name'))) ?>!</h6>
-                                <a class="dropdown-item" href="<?php echo base_url('profile'); ?>"><i
-                                        class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle">Profile </span></a>
-                                <a class="dropdown-item" href="<?php echo base_url(); ?>logout"><i
-                                        class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle" data-key="t-logout">Logout </span></a>
+                            <h6 class="dropdown-header">
+                                Welcome <?php echo ucwords(strtolower($this->session->userdata('name'))) ?>!
+                            </h6>
+
+                            <a class="dropdown-item" href="<?php echo base_url('profile'); ?>">
+                                <i class="mdi mdi-account-circle text-muted fs-12 align-middle me-1"></i>
+                                <span class="align-middle fs-10">Profile</span>
+                            </a>
+
+                            <a class="dropdown-item d-flex align-items-center" 
+                                href="javascript:void(0);" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#chat_modal">
+                                <i class="mdi mdi-message text-muted fs-12 align-middle me-2"></i>
+                                <span class="align-middle me-1 fs-10">Message</span>
+                                <span class="badge bg-danger rounded-pill unseen-badge" id="total-unseen-count2"></span>
+                            </a>
+
+
+                            <a class="dropdown-item" href="<?php echo base_url(); ?>logout">
+                                <i class="mdi mdi-logout-variant text-muted fs-12 align-middle me-1"></i>
+                                <span class="align-middle fs-10" data-key="t-logout">Logout</span>
+                            </a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -636,30 +652,9 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                             </a>
                         </li>
 
-                        <!-- <li class="nav-item">
-                                <a class="nav-link menu-link <?php echo ($page == 'setup_location_view') ? 'active' : ''; ?>"
-                                    href="<?php echo base_url('setup_location_view'); ?>">
-                                    <iconify-icon icon="solar:map-point-wave-bold-duotone"
-                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">Setup
-                                        Location </span>
-                                </a>
-                            </li> -->
-
-
-
                         <?php
                         if ($this->session->userdata('position') == 'System Analyst' || $this->session->userdata('position') == 'RMS') {
                             ?>
-
-                            <!-- <li class="nav-item">
-                                <a class="nav-link menu-link <?php echo ($page == 'it_task_view') ? 'active' : ''; ?>"
-                                    href="<?php echo base_url('it_task_view'); ?>">
-                                    <iconify-icon icon="solar:bill-bold-duotone"
-                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">IT
-                                        Daily Task </span>
-                                </a>
-                            </li> -->
-
 
 
                             <li class="nav-item">
@@ -715,30 +710,6 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                             <?php
                         }
                         ?>
-
-
-
-
-                        <!-- <li class="nav-item">
-                                <a class="nav-link menu-link <?php echo ($page == 'aboutus') ? 'active' : ''; ?>"
-                                    href="<?php echo base_url('aboutus'); ?>">
-                                    <iconify-icon icon="mdi:about"
-                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">About us
-                                    </span>
-                                </a>
-                            </li> -->
-
-
-
-                        <!-- <li class="nav-item">
-                                <a class="nav-link menu-link <?php echo ($page == 'faq_view') ? 'active' : ''; ?>"
-                                    href="<?php echo base_url('chat'); ?>">
-                                    <iconify-icon icon="fluent-color:chat-multiple-16"
-                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">Chat
-                                    </span>
-                                </a>
-                            </li> -->
-
 
                         <!-- Managerial Access -->
                         <?php
