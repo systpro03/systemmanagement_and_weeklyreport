@@ -1,6 +1,6 @@
 <!-- Project Banner -->
 <p align="center">
-  <img src="https://github.com/systpro04/png/blob/main/forgit.gif" width="100%" alt="Project Banner">
+  <img src="https://github.com/systpro03/png/blob/main/itsystem.png" width="100%" alt="Project Banner">
 </p>
 
 <h1 align="center">🧠 System Management & Weekly Report Management</h1>
