@@ -3,14 +3,39 @@ $page = basename($_SERVER['REQUEST_URI']);
 ?>
 <!doctype html>
 <?php
-if ($this->session->userdata('position') == 'Programmer' && $this->session->userdata('emp_id') != '03553-2013' && $this->session->userdata('emp_id') != '03399-2013') {
-    echo '<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar="dark" data-sidebar-size="lg" data-bs-theme="light"
-    data-sidebar-image="img-2" data-preloader="disable" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="horizontal" data-sidebar-visibility="show">';
+$emp_id = $this->session->userdata('emp_id');
+$position = $this->session->userdata('position');
+$month = date('m');
+$today = date('Y-m-d');
+$year = date('Y');
+
+// Define seasonal date ranges
+$horror_start = $year . '-10-15';
+$horror_end   = $year . '-11-04';
+
+// Default sidebar image
+$sidebar_image = 'img-2';
+
+// Apply seasonal themes
+if ($today >= $horror_start && $today <= $horror_end) {
+    $sidebar_image = 'halloween';
+} elseif ($month === '12') {
+    $sidebar_image = 'christmas';
+} elseif ($month === '02') {
+    $sidebar_image = 'lovely';
 } else {
-    echo '<html lang="en" data-layout="vertical" data-topbar="dark" data-sidebar="dark" data-sidebar-size="lg" data-bs-theme="light"
-    data-sidebar-image="img-2" data-preloader="disable" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="vertical" data-sidebar-visibility="show">';
+    $sidebar_image = 'img-2';
+}
+// Determine layout type
+if ($position == 'Programmer' && $emp_id != '03553-2013' && $emp_id != '03399-2013') {
+    // Horizontal layout for specific programmers
+    echo '<html lang="en"  data-layout="horizontal" data-topbar="dark" data-sidebar="dark" data-sidebar-size="lg" data-bs-theme="light" data-sidebar-image="' . $sidebar_image . '" data-preloader="disable" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="horizontal" data-sidebar-visibility="show">';
+} else {
+    // Vertical layout for everyone else
+    echo '<html lang="en" data-layout="vertical" data-topbar="dark" data-sidebar="dark" data-sidebar-size="lg" data-bs-theme="light" data-sidebar-image="' . $sidebar_image . '" data-preloader="disable" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="vertical" data-sidebar-visibility="show">';
 }
 ?>
+
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -103,7 +128,7 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                                         height="20" class="rounded-circle avatar-sm" />
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/auth.png" alt="" style=" height: 40px; width: 130px" />
+                                    <img src="assets/images/auth.png" alt="" style="  height: 70px; width: 150px" />
                                 </span>
                             </a>
                         </div>
@@ -316,7 +341,6 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                                 <span class="badge bg-danger rounded-pill unseen-badge" id="total-unseen-count2"></span>
                             </a>
 
-
                             <a class="dropdown-item" href="<?php echo base_url(); ?>logout">
                                 <i class="mdi mdi-logout-variant text-muted fs-12 align-middle me-1"></i>
                                 <span class="align-middle fs-10" data-key="t-logout">Logout</span>
@@ -336,7 +360,7 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                             class="rounded-circle avatar-sm" />
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/auth.png" alt="" style=" height: 40px; width: 130px" />
+                        <img src="assets/images/auth.png" alt="" style=" height: 70px; width: 150px" />
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -652,9 +676,30 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                             </a>
                         </li>
 
+                        <!-- <li class="nav-item">
+                                <a class="nav-link menu-link <?php echo ($page == 'setup_location_view') ? 'active' : ''; ?>"
+                                    href="<?php echo base_url('setup_location_view'); ?>">
+                                    <iconify-icon icon="solar:map-point-wave-bold-duotone"
+                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">Setup
+                                        Location </span>
+                                </a>
+                            </li> -->
+
+
+
                         <?php
                         if ($this->session->userdata('position') == 'System Analyst' || $this->session->userdata('position') == 'RMS') {
                             ?>
+
+                            <!-- <li class="nav-item">
+                                <a class="nav-link menu-link <?php echo ($page == 'it_task_view') ? 'active' : ''; ?>"
+                                    href="<?php echo base_url('it_task_view'); ?>">
+                                    <iconify-icon icon="solar:bill-bold-duotone"
+                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">IT
+                                        Daily Task </span>
+                                </a>
+                            </li> -->
+
 
 
                             <li class="nav-item">
@@ -710,6 +755,30 @@ if ($this->session->userdata('position') == 'Programmer' && $this->session->user
                             <?php
                         }
                         ?>
+
+
+
+
+                        <!-- <li class="nav-item">
+                                <a class="nav-link menu-link <?php echo ($page == 'aboutus') ? 'active' : ''; ?>"
+                                    href="<?php echo base_url('aboutus'); ?>">
+                                    <iconify-icon icon="mdi:about"
+                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">About us
+                                    </span>
+                                </a>
+                            </li> -->
+
+
+
+                        <!-- <li class="nav-item">
+                                <a class="nav-link menu-link <?php echo ($page == 'faq_view') ? 'active' : ''; ?>"
+                                    href="<?php echo base_url('chat'); ?>">
+                                    <iconify-icon icon="fluent-color:chat-multiple-16"
+                                        class="fs-25"></iconify-icon>&nbsp;&nbsp;&nbsp;&nbsp; <span class="fs-12">Chat
+                                    </span>
+                                </a>
+                            </li> -->
+
 
                         <!-- Managerial Access -->
                         <?php

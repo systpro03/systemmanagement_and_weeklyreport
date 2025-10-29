@@ -12,11 +12,34 @@ class Login_ctrl extends CI_Controller {
 
     public function index()
     {
+
         if ($this->session->username != "") {
             redirect('dashboard');
         }
-        $this->load->view('auth/login');
+
+        $month = date('m');
+        $day = date('d');
+        $today = date('Y-m-d');
+        $view = 'auth/login';
+
+        $year = date('Y');
+        $horror_start = $year . '-10-15';
+        $horror_end   = $year . '-11-03';
+
+        if ($today >= $horror_start && $today <= $horror_end) {
+            $view = 'auth/login_horror';
+        } elseif ($month === '12') {
+            $view = 'auth/login_christmas';
+        } elseif ($month === '02') {
+            $view = 'auth/login_horror';
+        } else {
+            $view = 'auth/login';
+        }
+
+        $this->load->view($view);
     }
+
+
     public function session_expire(){
         $this->session->sess_destroy();
         $this->load->view('auth/session_expired');
