@@ -1308,15 +1308,6 @@ Icons
         visibility: visible;
     } */
 
-
-    .bg-animation {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
     #stars {
         width: 1px;
         height: 1px;
