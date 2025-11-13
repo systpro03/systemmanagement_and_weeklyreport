@@ -132,8 +132,12 @@
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="fw-bold opacity-75 mb-1">System Programmers</p>
-                                <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
-                                        data-target="<?php echo $programmers_count; ?>"></span></h3>
+                                <p class="text-light small opacity-75 mb-2">
+                                    Developers responsible for building and maintaining our core systems.
+                                </p>
+                                <h3 class="fw-bold mb-0 text-end text-light">
+                                    <span class="counter-value" data-target="<?php echo $programmers_count; ?>"></span>
+                                </h3>
                                 <small class="opacity-75">Active Programmers</small>
                             </div>
                         </div>
@@ -150,8 +154,12 @@
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="fw-bold opacity-75 mb-1">System Analysts</p>
-                                <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
-                                        data-target="<?php echo $analysts_count; ?>"></span></h3>
+                                <p class="text-light small opacity-75 mb-2">
+                                    Experts who analyze business processes and design system solutions.
+                                </p>
+                                <h3 class="fw-bold mb-0 text-end text-light">
+                                    <span class="counter-value" data-target="<?php echo $analysts_count; ?>"></span>
+                                </h3>
                                 <small class="opacity-75">Active Analysts</small>
                             </div>
                         </div>
@@ -168,8 +176,12 @@
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="fw-bold opacity-75 mb-1">RMS Team</p>
-                                <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
-                                        data-target="<?php echo $others_count; ?>"></span></h3>
+                                <p class="text-light small opacity-75 mb-2">
+                                    Team responsible for records management and system data integrity.
+                                </p>
+                                <h3 class="fw-bold mb-0 text-end text-light">
+                                    <span class="counter-value" data-target="<?php echo $others_count; ?>"></span>
+                                </h3>
                                 <small class="opacity-75">Active RMS</small>
                             </div>
                         </div>
@@ -187,8 +199,12 @@
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <p class="fw-bold opacity-75 mb-1">My Workloads</p>
-                                    <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
-                                            data-target="<?php echo $my_workloads; ?>"></span></h3>
+                                    <p class="text-light small opacity-75 mb-2">
+                                        Overview of tasks and projects assigned to you for the current period.
+                                    </p>
+                                    <h3 class="fw-bold mb-0 text-end text-light">
+                                        <span class="counter-value" data-target="<?php echo $my_workloads; ?>"></span>
+                                    </h3>
                                     <small class="opacity-75">Number of Workloads</small>
                                 </div>
                             </div>
@@ -198,11 +214,13 @@
             </div>
         </div>
 
+
         <div class="col-xxl-12">
             <div class="row">
                 <div class="col-xl-4" data-aos="zoom-in-up">
                     <div class="card card-animate">
-                        <div class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-primary text-white text-center fw-bold rounded-top">
+                        <div
+                            class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-primary text-white text-center fw-bold rounded-top">
                             Upcoming Meeting Schedules </div>
 
                         <div class="card-body" data-simplebar style="max-height: 415px;">
@@ -212,7 +230,8 @@
                 </div>
                 <div class="col-xl-4" data-aos="zoom-in-up">
                     <div class="card card-animate">
-                        <div class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-warning text-white text-center fw-bold rounded-top">
+                        <div
+                            class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-warning text-white text-center fw-bold rounded-top">
                             Training | Fieldwork Schedules</div>
 
                         <div class="card-body" data-simplebar style="max-height: 415px;">
@@ -222,7 +241,8 @@
                 </div>
                 <div class="col-xl-4" data-aos="zoom-in-up">
                     <div class="card card-animate">
-                        <div class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-info text-white text-center fw-bold rounded-top">
+                        <div
+                            class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-info text-white text-center fw-bold rounded-top">
                             ALL FILES MONITORING | DIRECTORY
                         </div>
 
@@ -245,6 +265,19 @@
 </div>
 <!-- Custom Styles -->
 <style>
+    .avatar-lg {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
     .bg-gradient-primary {
         background: linear-gradient(135deg, #2563eb, #1e3a8a);
     }
@@ -268,12 +301,6 @@
     .shadow-hover:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .avatar-lg {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
     }
 </style>
 
