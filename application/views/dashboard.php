@@ -47,7 +47,8 @@
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasLeftLabel">
     <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
         <h5 class="m-0 me-2 text-white">My Team Members</h5>
-        <button type="button" class="btn-close btn-close-white ms-auto" id="customizerclose-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white ms-auto" id="customizerclose-btn"
+            data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <div class="card card-animate">
@@ -120,97 +121,79 @@
 
     <div class="row project-wrapper">
         <div class="col-xxl-12">
-            <div class="row">
-                <div class="col-xl-3" data-aos="zoom-in-right">
-                    <div class="card profile-project-card card-animate profile-project-primary">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-primary rounded-2 fs-2">
-                                        <iconify-icon icon="cib:visual-studio-code" class="fs-25"></iconify-icon>
-                                    </span>
-                                </div>
-                                <div class="flex-grow-1 overflow-hidden ms-3">
-                                    <p class="fw-bold text-muted text-truncate mb-3">System Programmers </p>
-                                    <div class="d-flex align-items-center mb-3">
-                                        <h4 class="fs-4 flex-grow-1 mb-0 text-end"><span class="counter-value"
-                                                data-target="<?php echo $programmers_count; ?>"></span></h4>
-                                    </div>
-                                    <p class="text-muted text-truncate mb-0 fs-6">Active Programmers </p>
-                                </div>
+            <div class="row g-3">
+                <!-- System Programmers Card -->
+                <div class="col-xl-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="card shadow-hover rounded-4 bg-gradient-primary text-white">
+                        <div class="card-body d-flex align-items-center">
+                            <div
+                                class="avatar-lg rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center">
+                                <iconify-icon icon="cib:visual-studio-code" class="fs-2"></iconify-icon>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="fw-bold opacity-75 mb-1">System Programmers</p>
+                                <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
+                                        data-target="<?php echo $programmers_count; ?>"></span></h3>
+                                <small class="opacity-75">Active Programmers</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xl-3" data-aos="zoom-in-right">
-                    <div class="card profile-project-card card-animate profile-project-warning">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-warning rounded-2 fs-2">
-                                        <iconify-icon icon="pixel:technology" class="fs-35"></iconify-icon>
-                                    </span>
-                                </div>
-                                <div class="flex-grow-1 overflow-hidden ms-3">
-                                    <p class="fw-bold text-muted text-truncate mb-3">System Analysts </p>
-                                    <div class="d-flex align-items-center mb-3">
-                                        <h4 class="fs-4 flex-grow-1 mb-0 text-end"><span class="counter-value"
-                                                data-target="<?php echo $analysts_count; ?>"></span></h4>
-                                    </div>
-                                    <p class="text-muted text-truncate mb-0 fs-6">Active Analysts </p>
-                                </div>
+                <!-- System Analysts Card -->
+                <div class="col-xl-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card shadow-hover rounded-4 bg-gradient-warning text-white">
+                        <div class="card-body d-flex align-items-center">
+                            <div
+                                class="avatar-lg rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center">
+                                <iconify-icon icon="pixel:technology" class="fs-2"></iconify-icon>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="fw-bold opacity-75 mb-1">System Analysts</p>
+                                <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
+                                        data-target="<?php echo $analysts_count; ?>"></span></h3>
+                                <small class="opacity-75">Active Analysts</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xl-3" data-aos="zoom-in-left">
-                    <div class="card profile-project-card card-animate profile-project-info">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-info rounded-2 fs-2">
-                                        <iconify-icon icon="ix:data-management-filled" class="fs-35"></iconify-icon>
-                                    </span>
-                                </div>
-                                <div class="flex-grow-1 overflow-hidden ms-3">
-                                    <p class="fw-bold text-muted text-truncate mb-3">
-                                        RMS Team </p>
-                                    <div class="d-flex align-items-center mb-3">
-                                        <h4 class="fs-4 flex-grow-1 mb-0 text-end"><span class="counter-value"
-                                                data-target="<?php echo $others_count; ?>"></span> </h4>
-                                    </div>
-                                    <p class="text-muted text-truncate mb-0 fs-6">Active Rms </p>
-                                </div>
+                <!-- RMS Team Card -->
+                <div class="col-xl-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card shadow-hover rounded-4 bg-gradient-info text-white">
+                        <div class="card-body d-flex align-items-center">
+                            <div
+                                class="avatar-lg rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center">
+                                <iconify-icon icon="ix:data-management-filled" class="fs-2"></iconify-icon>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <p class="fw-bold opacity-75 mb-1">RMS Team</p>
+                                <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
+                                        data-target="<?php echo $others_count; ?>"></span></h3>
+                                <small class="opacity-75">Active RMS</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xl-3" data-aos="zoom-in-left">
-                    <div class="card profile-project-card card-animate profile-project-success">
-                        <div class="card-body">
-                            <a href="<?php echo base_url('my_workloads'); ?>">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0">
-                                        <span class="avatar-title bg-light rounded-2 fs-2">
-                                            <iconify-icon icon="twemoji:books" class="fs-35"></iconify-icon>
-                                        </span>
-                                    </div>
-                                    <div class="flex-grow-1 overflow-hidden ms-3">
-                                        <p class="fw-bold text-muted text-truncate mb-3">
-                                            My Workloads </p>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <h4 class="fs-4 flex-grow-1 mb-0 text-end"><span class="counter-value"
-                                                    data-target="<?php echo $my_workloads; ?>"></span> </h4>
-                                        </div>
-                                        <p class="text-muted text-truncate mb-0 fs-6">Number of Workloads </p>
-                                    </div>
+                <!-- My Workloads Card -->
+                <div class="col-xl-3" data-aos="fade-up" data-aos-delay="200">
+                    <a href="<?php echo base_url('my_workloads'); ?>" class="text-decoration-none">
+                        <div class="card shadow-hover rounded-4 bg-gradient-success text-white">
+                            <div class="card-body d-flex align-items-center">
+                                <div
+                                    class="avatar-lg rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center">
+                                    <iconify-icon icon="twemoji:books" class="fs-2"></iconify-icon>
                                 </div>
-                            </a>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="fw-bold opacity-75 mb-1">My Workloads</p>
+                                    <h3 class="fw-bold mb-0 text-end text-light"><span class="counter-value"
+                                            data-target="<?php echo $my_workloads; ?>"></span></h3>
+                                    <small class="opacity-75">Number of Workloads</small>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -219,10 +202,9 @@
             <div class="row">
                 <div class="col-xl-4" data-aos="zoom-in-up">
                     <div class="card card-animate">
-                        <div class="card-header align-items-center d-flex bg-primary-subtle">
-                            <h6 class="card-title mb-0 flex-grow-1 fw-bold text-uppercase text-center">Upcoming Meeting
-                                Schedules </h6>
-                        </div>
+                        <div class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-primary text-white text-center fw-bold rounded-top">
+                            Upcoming Meeting Schedules </div>
+
                         <div class="card-body" data-simplebar style="max-height: 415px;">
                             <ul id="upcoming-event-list" class="list-group list-group-flush border-dashed"></ul>
                         </div>
@@ -230,10 +212,9 @@
                 </div>
                 <div class="col-xl-4" data-aos="zoom-in-up">
                     <div class="card card-animate">
-                        <div class="card-header align-items-center d-flex bg-primary-subtle">
-                            <h6 class="card-title mb-0 flex-grow-1 fw-bold text-uppercase text-center">Training |
-                                Fieldwork Schedules</h6>
-                        </div>
+                        <div class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-warning text-white text-center fw-bold rounded-top">
+                            Training | Fieldwork Schedules</div>
+
                         <div class="card-body" data-simplebar style="max-height: 415px;">
                             <ul id="upcoming-training-list" class="list-group list-group-flush border-dashed"></ul>
                         </div>
@@ -241,11 +222,10 @@
                 </div>
                 <div class="col-xl-4" data-aos="zoom-in-up">
                     <div class="card card-animate">
-                        <div class="card-header align-items-center d-flex bg-primary-subtle">
-                            <h6 class="card-title mb-0 flex-grow-1 fw-bold text-uppercase text-center"> ALL FILES
-                                MONITORING | DIRECTORY
-                            </h6>
+                        <div class="card-header mb-0 flex-grow-1 fw-bold text-uppercase text-center bg-gradient-info text-white text-center fw-bold rounded-top">
+                            ALL FILES MONITORING | DIRECTORY
                         </div>
+
                         <div class="card-body">
                             <div class="nav nav-tabs nav-justified mb-1">
                                 <a href="javascript:void(0);" class="nav-link " id="newTab" data-type="new">New System
@@ -263,8 +243,39 @@
     </div>
 
 </div>
-</div>
+<!-- Custom Styles -->
+<style>
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    }
 
+    .bg-gradient-warning {
+        background: linear-gradient(135deg, #f59e0b, #b45309);
+    }
+
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #06b6d4, #0e7490);
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(135deg, #16a34a, #166534);
+    }
+
+    .shadow-hover {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .shadow-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .avatar-lg {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+</style>
 
 <script>
     $(document).ready(function () {
